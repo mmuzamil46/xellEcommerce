@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-div{
+    flex: 1;
+    height: 150vh;
+}
+.header-menu{
+    height: 100px;
+    background-color: #0F3420;
+    color: white;
+position: fixed;
+
+}
+menu{
+    padding-top: 20px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+.menu a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.search input{
+    width:300px;
+    height: 35px;
+    border: none;
+    padding-left: 10px;
+}
+.search input:focus{
+    outline: none;
+}
+.search button{
+    height: 35px;
+    background-color:white;
+    color:  #0F3420;
+    border: none;
+    font-size: 24px;
+    padding-right:10px ;
+}
+.icons{
+    font-size: 24px;
+    margin-right: 20px;
+    gap: 30px;
+}
+.icons sup{
+    background-color: rgb(158, 7, 7);
+     padding-left: 4px;
+    padding-right:4px; 
+    border-radius: 50%;
+    font-size: 15px !important;
+}
+ .main{
+    min-height:85vh;
+    padding-top: 100px;
+    margin-bottom: 15px;
+
+} 
+.foot{
+    background-color: #0F3420;
+    color: white;
+ padding-left: 20px;
+ padding-right:20px;
+}
+
+.search-bar input{
+    width:600px;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+}
+.search-bar input:focus{
+    outline: none;
+}
+.search-bar button{
+    height: 30px;
+    background-color:white;
+    color:  #0F3420;
+    border: none;
+    font-size: 24px;
+    padding-right:10px ;
+    text-align: center;
+    /* padding-bottom: 10px !important; */
+}
+.links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+.links ul li a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.about p, .values p{
+    font-size: 14px;
+    text-align: justify;
+}
+.socials ul li a {
+    color: white;
+    font-size: 24px;
+}
+.socials ul li a:hover{
+    color: white;
+    
+}
+.help ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.help ul li a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.about,  .values{
+    width: 30%;
+}
+.others{
+    margin-top: 10px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.last-foot p{
+    color:rgba(255, 255, 255, 0.55);
+}
+.banner{
+    background-image: url('/image/banner.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    padding-top: 30px;
+}
+.banner h1{
+    color: white;
+    width: 300px;
+    font-size: 60px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.banner h2{
+    color: white;
+    width: 290px;
+    font-size: 60px;
+    font-weight: bolder;
+    padding-top: 30px;
+}
+.new-arrival h1{
+    color: #0F3420;
+    letter-spacing: 20px;
+    font-weight: bolder;
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.item{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
+.item h4{
+background-color: #0F3420;
+color: white;
+text-align: center;
+font-size: 16px;
+width: 100px;
+height: 35px;
+padding: 3px;
+cursor: pointer;
+}
