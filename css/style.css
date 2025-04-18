@@ -54,6 +54,10 @@ menu{
     font-size: 24px;
     margin-right: 20px;
     gap: 30px;
+   
+}
+.icons span{
+    cursor: pointer;
 }
 .icons sup{
     background-color: rgb(158, 7, 7);
@@ -192,3 +196,135 @@ height: 35px;
 padding: 3px;
 cursor: pointer;
 }
+.products h1{
+    color: #0F3420;
+    font-weight: bolder;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 20px;
+}
+.all-items{
+    padding-left: 20px;
+}
+.one-item{
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    
+    border: 2px solid #0F3420;
+    padding: 3px;
+}
+#to-cart{
+    width: 150px;
+    height: 50px;
+    border: 2px solid #0F3420;
+    border-radius: 50px;
+    color: #0F3420;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#to-cart:hover{
+    background-color: #0F3420;
+    color: white;
+    cursor: pointer;
+}
+.one-item h4{
+    font-weight: bolder;
+    color: #0F3420;
+}
+#price{
+    font-weight: bolder;
+    color: #0F3420;
+}
+#desc{
+    color: #0F3420;
+}
+#rate  {
+    color: rgb(212, 188, 52) !important; 
+}
+#to-fav{
+    width: 100px;
+    height: 35px;
+    border: 2px solid #0F3420;
+    border-radius: 50px;
+    color: #0F3420;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 625px) {
+    .header-menu{
+        height: 80px;
+    }
+   .logo img{
+    width: 50px;
+    height: 50px;
+   }
+    .search input{
+        width:150px;
+        height: 35px;
+    }
+    .search button{
+        font-size: 16px;
+        padding-left: 10px;
+    }
+   
+    .icons{
+        font-size: 22px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+    .main{
+        padding-top: 80px;
+    
+    } 
+
+    .banner{
+       height: 300px;
+       
+    }
+    .banner h1{
+        width: 180px;
+        font-size: 25px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    .banner h2{
+        width: 170px;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    .new-arrival h1{
+       
+        letter-spacing: 8px;
+        font-weight: bolder;
+    }
+    .items{
+       flex-direction: column;
+       gap: 16px;
+    }
+    .item{
+        width: 80%;
+      
+    }
+    .one-item{
+        min-width: 100%;
+        /* //height: 300px; */
+    }
+    .about, .values{
+        width: 100%;
+    }
+    .main-div{
+        height: 150vh;
+    }
+    .banner h1{
+        font-size: 30px;
+    }
+    .banner h2{
+        font-size: 30px;
+    }
+    .products h1{
+        font-size: 40px;
+    }
+  }
