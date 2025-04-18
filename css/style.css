@@ -309,7 +309,7 @@ cursor: pointer;
       
     }
     .one-item{
-        min-width: 100%;
+        width: 80%;
         /* //height: 300px; */
     }
     .about, .values{
@@ -326,5 +326,23 @@ cursor: pointer;
     }
     .products h1{
         font-size: 40px;
+    }
+    .search-bar input{
+        width:80%;
+        height: 30px;
+       
+    }
+    .others h5{
+    font-size: 14px;
+    }
+    .socials ul li a {
+       
+        font-size: 18px;
+    }
+    .foot-content h5{
+        font-size: 18px;
+    }
+    .foot-content span{
+        cursor: pointer;
     }
   }
