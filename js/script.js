@@ -79,6 +79,7 @@ const products= [
 
 ]
 const cart = [];
+const fav = [];
 
 $(document).ready(function(){
 $("#cart-count").text(cart.length);
@@ -112,6 +113,25 @@ $(".menu").on('click', 'a', function(e){
     
 })
 
+$('.search').on('click','button', function(){
+   const key = $(this).prev().val();
+    const filtered = products.filter((element) => element.name.trim().toLowerCase().includes(key.trim().toLowerCase()));
+    $(".banner").hide();
+    $(".new-arrival").hide();
+    $(".all-items").removeClass("d-none");
+    $(".all-items").addClass("d-flex");
+    $("table").hide();
+    $(".products h1").text("Results for " + key);
+    if(filtered.length != 0){
+        loadProducts(filtered);
+    } else {
+$('.all-items').html('<h1 class="text-center">No items found</h1>');
+$(this).prev().val('');
+    }
+  
+
+});
+
     $(".all-items").on('click','.to-cart',function(){
 let itemid = $(this).parent().parent().find("h4").text().split("-")[1];
 
@@ -127,6 +147,20 @@ $("#cart-count").text(cart.length);
 
     });
 
+    $(".all-items").on('click', '.to-fav',function(){
+        let itemid = $(this).parent().parent().find("h4").text().split("-")[1];
+let favItem = products.find(item => item.id == itemid);
+if(fav.find(item => item.id == favItem.id)){
+    alert("This item is already in your favorite list");
+} else{
+
+    fav.push(favItem);
+    alert("This item is added to your favorite list");
+}
+$('#fav-count').text(fav.length);
+// console.log(fav);
+
+    });
 $("#cart").click(function(){
     console.log(cart);
 
@@ -141,6 +175,21 @@ $("#cart").click(function(){
     
 })
 
+$('#fav').click(function(){
+    $(".banner").hide();
+    $(".new-arrival").hide();
+    $(".all-items").removeClass("d-none");
+    $(".all-items").addClass("d-flex");
+    $("table").hide();
+    $(".products h1").text("Favorite Items");
+    if(fav.length != 0){
+        loadProducts(fav);
+    } else{
+        $('.all-items').html('<h1 class="text-center">No items found</h1>');
+    }
+
+})
+
 $('table').on('change', '#qty', function(){
     let qty = parseInt($(this).val());
     let id = parseInt($(this).parent().siblings('th').text());
@@ -151,7 +200,7 @@ $('table').on('change', '#qty', function(){
         $(this).val(item.qty);
         return;
     }
-    $
+    
 
     let price = $(this).parent().prev().text();
     let total = qty * price;
