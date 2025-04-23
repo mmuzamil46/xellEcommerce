@@ -22,7 +22,7 @@ html,body{
 position: fixed;
 
 }
-menu{
+.header-menu .menu{
     padding-top: 20px;
 }
 .menu a{
@@ -147,6 +147,9 @@ menu{
     height: 500px;
     width: 100%;
     padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .banner h1{
     color: white;
@@ -161,6 +164,13 @@ menu{
     font-size: 60px;
     font-weight: bolder;
     padding-top: 30px;
+}
+.new-arrival{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .new-arrival h1{
     color: #0F3420;
@@ -214,7 +224,7 @@ cursor: pointer;
     border: 2px solid #0F3420;
     padding: 3px;
 }
-#to-cart{
+.to-cart{
     width: 150px;
     height: 50px;
     border: 2px solid #0F3420;
@@ -223,7 +233,7 @@ cursor: pointer;
     font-weight: bolder;
     font-size: 20px;
 }
-#to-cart:hover{
+.to-cart:hover{
     background-color: #0F3420;
     color: white;
     cursor: pointer;
@@ -242,7 +252,7 @@ cursor: pointer;
 #rate  {
     color: rgb(212, 188, 52) !important; 
 }
-#to-fav{
+.to-fav{
     width: 100px;
     height: 35px;
     border: 2px solid #0F3420;
@@ -253,6 +263,27 @@ cursor: pointer;
 }
 
 
+.cart-row{
+    color: #0F3420 !important;
+}
+.cart-row span{
+    color: red !important;
+    cursor: pointer;
+}
+.checkout{
+    width: 100%;
+    height: 50px;
+    background-color: #0F3420;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+}
+#total{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #0F3420;
+}
 @media only screen and (max-width: 625px) {
     .header-menu{
         height: 80px;
