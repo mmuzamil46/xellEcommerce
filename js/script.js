@@ -39,7 +39,7 @@ const products= [
         desc : "Gini and Jony Boys Karnel Jeans",
         rate : 3.5,
         price : 1000,
-        stoke : 5,
+        stoke : 1,
         image : "/image/clothing_4.jpg",
         arriveDate : "2025-01-02"
     },
@@ -92,7 +92,8 @@ $(".menu").on('click', 'a', function(e){
     if($(this).text() == "Home"){
         $(".banner").show();
         $(".new-arrival").show();
-       
+        $(".all-items").removeClass("d-none");
+    $(".all-items").addClass("d-flex");
         $("table").hide();
         $(".products h1").text("FOR YOU");
         loadProducts(products);
@@ -136,7 +137,17 @@ $(this).prev().val('');
 let itemid = $(this).parent().parent().find("h4").text().split("-")[1];
 
 let cartItem = products.find(item => item.id == itemid);
+if(cartItem.stoke == 0 ){
+    alert("This item is out of stock");
+    return;
+}
 if(cart.find(item => item.id == cartItem.id)){
+    if(cart.find(item => item.id == cartItem.id).qty >= cartItem.stoke){
+        alert("The quantity you entered is not available in stock");
+        $(this).parent().prev().text('out of stoke');
+        $(this).parent().prev().css('color', 'red');
+        return;
+    }
     cart[cart.indexOf(cartItem)].qty += 1;
 } else{
     cartItem.qty = 1;
@@ -170,7 +181,9 @@ $("#cart").click(function(){
     $(".all-items").addClass("d-none");
     $("table").show();
     $(".products h1").text("Cart Items");
-
+    $('html, body').animate({
+        scrollTop: $('table').offset().top - 200
+      }, 100);
    loadCart();
     
 })
@@ -182,6 +195,9 @@ $('#fav').click(function(){
     $(".all-items").addClass("d-flex");
     $("table").hide();
     $(".products h1").text("Favorite Items");
+    $('html, body').animate({
+        scrollTop: $('.all-items').offset().top - 200
+      }, 100);
     if(fav.length != 0){
         loadProducts(fav);
     } else{
@@ -233,6 +249,38 @@ loadCart();
 })
 
 
+let paymentMethod = '';
+
+$('.payment').on('click', 'li' , function(){
+paymentMethod = $(this).attr('id');
+$(this).addClass('active').siblings().removeClass('active');
+//console.log(paymentMethod);
+});
+
+$('.checkout').click(function(){
+    if(cart.length == 0){
+        alert("Your cart is empty");
+        return;
+    }
+    if(paymentMethod == ''){
+        alert("Please select a payment method");
+        return;
+    }
+    if(confirm("Are you sure you want to checkout?")){
+        alert("Your order has been placed successfully. Thank you for shopping with us.");
+        cart.forEach(element => {
+            products.find(item => item.id == element.id).stoke -= element.qty;
+        })
+        cart.splice(0, cart.length);
+        $("#cart-count").text(cart.length); 
+        $(`#${paymentMethod}`).removeClass('active');
+        loadCart();
+        paymentMethod = '';
+    }
+
+
+
+})
   });
 
 
@@ -251,6 +299,11 @@ itemsToLoad.forEach(element => {
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     (${element.rate}/5)</span>
+                   
+                     ${element.stoke > 0 
+    ? '<p id="stoke">in stoke</p>' 
+    : '<p id="stoke" style="color:red">out of stoke</p>'
+  }
                    <div class="d-flex flex-column gap-2">
                     <button class="to-cart">Add to Cart</button>
                     <button class="to-fav">Favorite</button>
