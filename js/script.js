@@ -85,10 +85,47 @@ $(document).ready(function(){
 $("#cart-count").text(cart.length);
 $("table").hide();
 loadProducts(products)
+$('.mobile-menu').hide();
+if($(window).width() < 990){
+    $('.mobile-menu').hide();
 
+  }
+  $(window).resize(function(){
+    //if($(window).width() > 728){
+      //$('.mobile-menu').hide();
+      $(".mobile-menu").slideUp();
+      if($('#menu-bar i').hasClass('fa-times')){
+          $('#menu-bar i').removeClass('fa-times');
+          $('#menu-bar i').addClass('fa-bars');
+      }
+    //}
+});
+
+
+
+$('#menu-bar').click(function(e){
+    e.stopPropagation();
+    $('.mobile-menu').slideToggle();
+$(this).find('i').toggleClass('fa-bars fa-times');
+    });
+
+    $(document).click(function() {
+        if ($('.mobile-menu').is(':visible')) {
+            $('.mobile-menu').slideUp();
+            $('#menu-bar i').removeClass('fa-times').addClass('fa-bars');
+        }
+    });
+    $('.mobile-menu').click(function(e) {
+        e.stopPropagation();
+    });
 
 $(".menu").on('click', 'a', function(e){
    // e.preventDefault();
+   $(".mobile-menu").slideUp();
+   if($('#menu-bar i').hasClass('fa-times')){
+       $('#menu-bar i').removeClass('fa-times');
+       $('#menu-bar i').addClass('fa-bars');
+   }
     if($(this).text() == "Home"){
         $(".banner").show();
         $(".new-arrival").show();
@@ -107,11 +144,20 @@ $(".menu").on('click', 'a', function(e){
         $(".all-items").addClass("d-flex");
         $("table").hide();
         $(".products h1").text($(this).text());
+      
         loadProducts(filtered);
     }
     
     
     
+})
+
+$('.search').on('focus', 'input', function(){
+    $(".mobile-menu").slideUp();
+    if($('#menu-bar i').hasClass('fa-times')){
+        $('#menu-bar i').removeClass('fa-times');
+        $('#menu-bar i').addClass('fa-bars');
+    }
 })
 
 $('.search').on('click','button', function(){
@@ -281,6 +327,25 @@ $('.checkout').click(function(){
 
 
 })
+
+
+
+if($(window).width() < 768){
+    $('.drop').next().hide();
+
+  }
+  $(window).resize(function(){
+    if($(window).width() < 768){
+      $('.drop').next().hide();
+    }
+});
+
+  $('.drop').click(function(){
+
+// $(this).next().hide();
+$(this).next().slideToggle(400);
+$(this).children('i').toggleClass('fa-angle-down fa-angle-up')
+});
   });
 
 

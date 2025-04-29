@@ -284,7 +284,28 @@ cursor: pointer;
     font-weight: bolder;
     color: #0F3420;
 }
-@media only screen and (max-width: 625px) {
+
+.mobile-menu{
+    background-color: #0F3420;
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    padding-left: 20px;
+    color: white;
+}
+
+@media only screen and (max-width: 728px){
+    .mobile-menu{
+       
+        top: 80px;
+        
+    }
+
+.products h1{
+    font-size: 30px;
+}
+}
+@media only screen and (max-width: 728px) {
     .header-menu{
         height: 80px;
     }
@@ -356,7 +377,7 @@ cursor: pointer;
         font-size: 30px;
     }
     .products h1{
-        font-size: 40px;
+        font-size: 20px;
     }
     .search-bar input{
         width:80%;
@@ -387,8 +408,24 @@ cursor: pointer;
         width: 40px;
         height: 40px;
       }
+
+.payment ul{ 
+gap: 5px;
+}
+
   }
 
+
+  @media only screen and (max-width: 435px){
+.icons{
+    font-size: 18px;
+    gap: 3px;
+    margin-right: 0px;
+}
+.icons sup{
+    font-size: 5px;
+}
+  }
 
   .payment h3{
     color: #0F3420;
