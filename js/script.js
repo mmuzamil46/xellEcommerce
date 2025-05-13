@@ -1,83 +1,294 @@
-const products= [
-    {
-        id : 1,
-        name : "Men's Jacket",
-        category : 'clothing',
-        desc : "Puma Men Ferrari Black Fleece Jacket",
-        rate : 3.5,
-        price : 2500,
-        stoke : 5,
-        image : "/image/clothing_1.jpg",
-        arriveDate : "2025-01-01"
-    },
-    {
-        id : 2,
-        name : "Women's Jacket",
-        category : 'clothing',
-        desc : "Reebok Knit Rib Women Black Jacket",
-        rate : 4.5,
-        price : 2000,
-        stoke : 5,
-        image : "/image/clothing_2.jpg",
-        arriveDate : "2025-01-02"
-    },
-    {
-        id : 3,
-        name : "Girls Dress",
-        category : 'clothing',
-        desc : "Disney Kids Girls Disney girl pink pooh top Kidswear",
-        rate : 3.5,
-        price : 1500,
-        stoke : 5,
-        image : "/image/clothing_3.jpg",
-        arriveDate : "2025-01-02"
-    },
-    {
-        id : 4,
-        name : "Jeans",
-        category : 'clothing',
-        desc : "Gini and Jony Boys Karnel Jeans",
-        rate : 3.5,
-        price : 1000,
-        stoke : 1,
-        image : "/image/clothing_4.jpg",
-        arriveDate : "2025-01-02"
-    },
-    {
-        id : 5,
-        name : "Dress",
-        category : 'clothing',
-        desc : "Tonga Women Green Dress",
-        rate : 2.5,
-        price : 10000,
-        stoke : 5,
-        image : "/image/clothing_5.jpg",
-        arriveDate : "2025-01-02"
-    },
-    {
-        id : 6,
-        name : "Dress",
-        category : 'clothing',
-        desc : "United Colors of Benetton Girls Printed Navy Blue Dress",
-        rate : 2.5,
-        price : 10000,
-        stoke : 5,
-        image : "/image/clothing_6.jpg",
-        arriveDate : "2025-01-04"
-    },
-    {
-        id : 7,
-        name : "Trouser",
-        category : 'clothing',
-        desc : "Scullers Men Scul Brown Trousers",
-        rate : 2.5,
-        price : 3000,
-        stoke : 5,
-        image : "/image/clothing_7.jpg",
-        arriveDate : "2025-01-05"
-    }
+// const products= [
+//     {
+//         id : 1,
+//         name : "Men's Jacket",
+//         category : 'clothing',
+//         desc : "Puma Men Ferrari Black Fleece Jacket",
+//         rate : 3.5,
+//         price : 2500,
+//         stoke : 5,
+//         image : "/image/clothing_1.jpg",
+//         arriveDate : "2025-01-01"
+//     },
+//     {
+//         id : 2,
+//         name : "Women's Jacket",
+//         category : 'clothing',
+//         desc : "Reebok Knit Rib Women Black Jacket",
+//         rate : 4.5,
+//         price : 2000,
+//         stoke : 5,
+//         image : "/image/clothing_2.jpg",
+//         arriveDate : "2025-01-02"
+//     },
+//     {
+//         id : 3,
+//         name : "Girls Dress",
+//         category : 'clothing',
+//         desc : "Disney Kids Girls Disney girl pink pooh top Kidswear",
+//         rate : 3.5,
+//         price : 1500,
+//         stoke : 5,
+//         image : "/image/clothing_3.jpg",
+//         arriveDate : "2025-01-02"
+//     },
+//     {
+//         id : 4,
+//         name : "Jeans",
+//         category : 'clothing',
+//         desc : "Gini and Jony Boys Karnel Jeans",
+//         rate : 3.5,
+//         price : 1000,
+//         stoke : 1,
+//         image : "/image/clothing_4.jpg",
+//         arriveDate : "2025-01-02"
+//     },
+//     {
+//         id : 5,
+//         name : "Dress",
+//         category : 'clothing',
+//         desc : "Tonga Women Green Dress",
+//         rate : 2.5,
+//         price : 10000,
+//         stoke : 5,
+//         image : "/image/clothing_5.jpg",
+//         arriveDate : "2025-01-02"
+//     },
+//     {
+//         id : 6,
+//         name : "Dress",
+//         category : 'clothing',
+//         desc : "United Colors of Benetton Girls Printed Navy Blue Dress",
+//         rate : 2.5,
+//         price : 10000,
+//         stoke : 5,
+//         image : "/image/clothing_6.jpg",
+//         arriveDate : "2025-01-04"
+//     },
+//     {
+//         id : 7,
+//         name : "Trouser",
+//         category : 'clothing',
+//         desc : "Scullers Men Scul Brown Trousers",
+//         rate : 2.5,
+//         price : 3000,
+//         stoke : 5,
+//         image : "/image/clothing_7.jpg",
+//         arriveDate : "2025-01-05"
+//     }
 
-]
+// ]
+const products = [
+    // Electronics
+    {
+        id: 1,
+        name: "Smartphone",
+        category: "Electronics",
+        desc: "Samsung Galaxy A54 5G with AMOLED display",
+        rate: 4.2,
+        price: 45000,
+        stoke: 12,
+        image: "/image/electronics_1.jpg",
+        arriveDate: "2025-01-01"
+    },
+    {
+        id: 2,
+        name: "Bluetooth Speaker",
+        category: "Electronics",
+        desc: "JBL Go 3 Portable Waterproof Speaker",
+        rate: 4.5,
+        price: 3500,
+        stoke: 20,
+        image: "/image/electronics_2.jpg",
+        arriveDate: "2025-01-02"
+    },
+    {
+        id: 3,
+        name: "Wireless Earbuds",
+        category: "Electronics",
+        desc: "boAt Airdopes 141 ANC True Wireless Earbuds",
+        rate: 4.0,
+        price: 2500,
+        stoke: 15,
+        image: "/image/electronics_3.jpg",
+        arriveDate: "2025-01-03"
+    },
+
+    // Appliances
+    {
+        id: 4,
+        name: "Microwave Oven",
+        category: "Appliances",
+        desc: "LG 20 L Solo Microwave Oven with Smart Inverter",
+        rate: 3.8,
+        price: 8999,
+        stoke: 6,
+        image: "/image/appliances_1.jpg",
+        arriveDate: "2025-01-01"
+    },
+    {
+        id: 5,
+        name: "Washing Machine",
+        category: "Appliances",
+        desc: "Samsung 6.5 kg Fully Automatic Front Load Washer",
+        rate: 4.3,
+        price: 24999,
+        stoke: 3,
+        image: "/image/appliances_2.jpg",
+        arriveDate: "2025-01-02"
+    },
+    {
+        id: 6,
+        name: "Air Conditioner",
+        category: "Appliances",
+        desc: "Voltas 1.5 Ton 3 Star Inverter Split AC",
+        rate: 4.1,
+        price: 33999,
+        stoke: 2,
+        image: "/image/appliances_3.jpg",
+        arriveDate: "2025-01-03"
+    },
+
+    // Clothing
+    {
+        id: 7,
+        name: "Dress",
+        category: "Clothing",
+        desc: "United Colors of Benetton Girls Printed Navy Blue Dress",
+        rate: 2.5,
+        price: 10000,
+        stoke: 5,
+        image: "/image/clothing_6.jpg",
+        arriveDate: "2025-01-04"
+    },
+    {
+        id: 8,
+        name: "Men's Shirt",
+        category: "Clothing",
+        desc: "Raymond Men Slim Fit Formal Shirt",
+        rate: 3.9,
+        price: 1599,
+        stoke: 8,
+        image: "/image/clothing_2.jpg",
+        arriveDate: "2025-01-05"
+    },
+    {
+        id: 9,
+        name: "Women's Jacket",
+        category: "Clothing",
+        desc: "ONLY Women's Green Solid Puffer Jacket",
+        rate: 4.6,
+        price: 2999,
+        stoke: 4,
+        image: "/image/clothing_3.jpg",
+        arriveDate: "2025-01-06"
+    },
+
+    // Shoes
+    {
+        id: 10,
+        name: "Running Shoes",
+        category: "Shoes",
+        desc: "Nike Men's Revolution 6 Running Shoes",
+        rate: 4.4,
+        price: 4999,
+        stoke: 10,
+        image: "/image/shoes_1.jpg",
+        arriveDate: "2025-01-02"
+    },
+    {
+        id: 11,
+        name: "Formal Shoes",
+        category: "Shoes",
+        desc: "Bata Men's Leather Formal Shoes",
+        rate: 3.7,
+        price: 2799,
+        stoke: 7,
+        image: "/image/shoes_2.jpg",
+        arriveDate: "2025-01-04"
+    },
+    {
+        id: 12,
+        name: "Sneakers",
+        category: "Shoes",
+        desc: "Puma Unisex Sneakers",
+        rate: 4.5,
+        price: 3499,
+        stoke: 9,
+        image: "/image/shoes_3.jpg",
+        arriveDate: "2025-01-05"
+    },
+
+    // Watch & Jewellery
+    {
+        id: 13,
+        name: "Men's Watch",
+        category: "Watch & Jewllery",
+        desc: "Fastrack Analog Watch for Men",
+        rate: 4.2,
+        price: 2599,
+        stoke: 6,
+        image: "/image/watch_1.jpg",
+        arriveDate: "2025-01-03"
+    },
+    {
+        id: 14,
+        name: "Women's Necklace",
+        category: "Watch & Jewllery",
+        desc: "Zaveri Pearls Gold-Plated Necklace Set",
+        rate: 4.6,
+        price: 1999,
+        stoke: 3,
+        image: "/image/watch_2.jpg",
+        arriveDate: "2025-01-06"
+    },
+    {
+        id: 15,
+        name: "Smartwatch",
+        category: "Watch & Jewllery",
+        desc: "boAt Xtend Smartwatch with Alexa Built-in",
+        rate: 4.1,
+        price: 2999,
+        stoke: 12,
+        image: "/image/watch_3.jpg",
+        arriveDate: "2025-01-07"
+    },
+
+    // Books
+    {
+        id: 16,
+        name: "Atomic Habits",
+        category: "Books",
+        desc: "A book by James Clear on habit-building",
+        rate: 4.9,
+        price: 499,
+        stoke: 20,
+        image: "/image/books_1.jpg",
+        arriveDate: "2025-01-01"
+    },
+    {
+        id: 17,
+        name: "The Alchemist",
+        category: "Books",
+        desc: "A philosophical novel by Paulo Coelho",
+        rate: 4.7,
+        price: 399,
+        stoke: 18,
+        image: "/image/books_2.jpg",
+        arriveDate: "2025-01-02"
+    },
+    {
+        id: 18,
+        name: "Rich Dad Poor Dad",
+        category: "Books",
+        desc: "Robert Kiyosaki’s guide to financial literacy",
+        rate: 4.8,
+        price: 450,
+        stoke: 25,
+        image: "/image/books_3.jpg",
+        arriveDate: "2025-01-03"
+    }
+];
 const cart = [];
 const fav = [];
 
@@ -350,6 +561,7 @@ $(this).children('i').toggleClass('fa-angle-down fa-angle-up')
 
 
   function loadProducts(itemsToLoad){
+    itemsToLoad = shuffleArray(itemsToLoad);
     document.querySelector(".all-items").innerHTML = ""; 
 itemsToLoad.forEach(element => {
     document.querySelector(".all-items").innerHTML += `  <div class="one-item">
@@ -403,3 +615,14 @@ document.querySelector('tbody').innerHTML = '';
     });
     $('#total').text(totalPrice);
   }
+
+
+
+  function shuffleArray(array) {
+    const shuffled = [...array]; 
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}

@@ -266,6 +266,10 @@ cursor: pointer;
 .cart-row{
     color: #0F3420 !important;
 }
+.cart-row img{
+    width: 100px;
+    height: 100px;
+}
 .cart-row span{
     color: red !important;
     cursor: pointer;
@@ -302,7 +306,11 @@ cursor: pointer;
     }
 
 .products h1{
-    font-size: 30px;
+    font-size: 40px;
+    letter-spacing: normal;
+}
+#qty{
+    width: 40px;
 }
 }
 @media only screen and (max-width: 728px) {
